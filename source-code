@@ -1,0 +1,47 @@
+
+import java.util.Scanner;
+
+public class soalNo2 {
+    public static void main(String[] args) {
+        
+        int angka1, angka2, pilihan, hasil=0;
+        
+        Scanner input = new Scanner(System.in);
+        for(String i = "Y"; i.equals("Y")||i.equals("y"); )
+        {
+            //Pilihan
+            System.out.println("Pilih");
+            System.out.println("1. Penjumlahan");
+            System.out.println("2. Perkalian");
+            System.out.println("3. Pembagian");
+            System.out.println("4. Pengurangan");
+        
+            System.out.print("Masukan opsi: ");
+            pilihan = input.nextInt();
+        
+            //input data
+            System.out.print("Masukan angka1: ");
+            angka1 = input.nextInt();
+            System.out.print("Masukan angka2: ");
+            angka2 = input.nextInt();
+        
+            switch(pilihan){
+                case 1 : hasil = angka1 + angka2;
+                break;
+                case 2 : hasil = angka1 * angka2;
+                break;
+                case 3 : hasil = angka1 % angka2;
+                break;
+                case 4 : hasil = angka1 - angka2;
+                break;
+                default :
+                    System.out.println("salah masukan inputan");
+            }
+            
+            System.out.println("Hasil: "+hasil);
+        
+            System.out.print("ingin ngitung lagi? Y/T: ");
+            i = input.next();
+       }
+    }
+}
